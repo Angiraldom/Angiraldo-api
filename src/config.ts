@@ -11,6 +11,7 @@ export default registerAs('configuration', () => {
     email: {
       username: process.env.EMAIL,
       password: process.env.EMAIL_PASSWORD,
+      emailTo: 'jesusdeveloper404@gmail.com',
     },
   };
 });
