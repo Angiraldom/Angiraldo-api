@@ -31,7 +31,7 @@ export class EmailService {
     const transporter = this.createTransporter();
     try {
       await transporter.sendMail({
-        from: `"Formulario subscripcion" <${this.config.email.username}>`,
+        from: `"Formulario subscripción" <${this.config.email.username}>`,
         to: this.config.email.emailTo,
         subject: 'Formulario suscripción libro',
         text: 'Formulario suscripción libro',
