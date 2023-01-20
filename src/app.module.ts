@@ -5,6 +5,8 @@ import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { enviroments } from './enviroment';
 import { UsersModule } from './users/users.module';
+import { EmailService } from './core/email.service';
+import { ExcelService } from './core/excel.service';
 import configuration from './config';
 
 @Module({
@@ -18,6 +20,6 @@ import configuration from './config';
     UsersModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, EmailService, ExcelService],
 })
 export class AppModule {}
