@@ -12,7 +12,7 @@ import configuration from './config';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: enviroments.dev || '.env',
+      envFilePath: enviroments[process.env.NODE_ENV] || '.env',
       load: [configuration],
       isGlobal: true,
     }),
