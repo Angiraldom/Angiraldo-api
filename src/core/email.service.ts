@@ -32,7 +32,7 @@ export class EmailService {
     try {
       await transporter.sendMail({
         from: `"Formulario subscripción" <${this.config.email.username}>`,
-        to: this.config.email.emailTo,
+        to: this.config.email.username,
         subject: 'Formulario suscripción libro',
         text: 'Formulario suscripción libro',
         attachments: [
