@@ -10,7 +10,7 @@ import configuration from '../config';
       useFactory: (config: ConfigType<typeof configuration>) => {
         const { db, password, username } = config.database;
         return {
-          uri: `mongodb+srv://${username}:${password}@cluster0.qhxy3yd.mongodb.net/landing-live?retryWrites=true&w=majority`,
+          uri: `mongodb+srv://${username}:${password}@angiraldo.nkd1a26.mongodb.net/test`,
           user: username,
           pass: password,
           dbName: db,
@@ -24,7 +24,7 @@ import configuration from '../config';
       provide: 'MONGO',
       useFactory: async (config: ConfigType<typeof configuration>) => {
         const { db, password, username } = config.database;
-        const uri = `mongodb+srv://${username}:${password}@cluster0.qhxy3yd.mongodb.net/landing-live?retryWrites=true&w=majority`;
+        const uri = `mongodb+srv://${username}:${password}@angiraldo.nkd1a26.mongodb.net/test`;
         const client = new MongoClient(uri);
         await client.connect();
         return client.db(db);
